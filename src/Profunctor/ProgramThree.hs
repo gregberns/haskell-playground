@@ -1,10 +1,11 @@
-module ProgramThree
+module Profunctor.ProgramThree
     ( programThree
     ) where
 
 import Prelude hiding (div)
 import qualified Data.List as List
-import Html
+import Profunctor.Html
+import Profunctor.Model (BasicProgram, always, composeModel)
 
 -- https://github.com/joneshf/elm-profunctors/tree/master/src/Buttons/Count
 
@@ -25,34 +26,26 @@ view (i, a) =
     text (show i)
   ]
 
-type BasicProgram model msg =
-  ( model
-  , msg -> model -> model
-  , model -> Html msg
-  )
-basic :: BasicProgram (Model (Int -> Int)) (Int -> Int)
+-- beginnerProgram : {model : Model, update : Msg Model Model -> Model -> Model, view : Model -> Html.Html a}
+basic :: BasicProgram (Model (Int -> Int)) (Msg Int Int)
 basic = 
   ( model 0 id
   , update
   , view
   )
 
-always :: a -> b -> a
-always a _ =
-  a
-
-doModel x =
-  mapModel (always x)  
-
-mapModel f (m, u, v) =
-  (f m, u, v)
-
 -- incrementButton : BeginnerProgram (Button.Model (number -> number)) (number -> number)
 incButton :: BasicProgram (Model (Int -> Int)) (Int -> Int)
 incButton =
-  doModel (model 1 (\i -> i + 1)) basic
+  composeModel (model 1 (\i -> i + 1)) basic
+
+-- decrementButton : BeginnerProgram (Button.Model (number -> number)) (number -> number)
+decButton :: BasicProgram (Model (Int -> Int)) (Int -> Int)
+decButton =
+  composeModel (model 1 (\i -> i - 1)) basic
 
 programThree :: IO ()
 programThree = 
   do
     print "Starting..."
+

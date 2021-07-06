@@ -5,6 +5,7 @@
 -- someFunc :: IO ()
 -- someFunc = putStrLn "someFunc"
 
+-- http://comonad.com/reader/2012/abstracting-with-applicatives/
 
 {-# LANGUAGE TypeOperators, MultiParamTypeClasses, FlexibleInstances,
 StandaloneDeriving, FlexibleContexts, UndecidableInstances,

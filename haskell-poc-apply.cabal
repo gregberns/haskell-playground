@@ -26,11 +26,17 @@ source-repository head
 library
   exposed-modules:
       Appl
-      Html
-      Model
-      ProgramOne
-      ProgramThree
-      ProgramTwo
+      ComonadTree
+      Core
+      Monoid.Cata
+      Monoid.State
+      Profunctor.Basics
+      Profunctor.Html
+      Profunctor.Model
+      Profunctor.ProgramFour
+      Profunctor.ProgramOne
+      Profunctor.ProgramThree
+      Profunctor.ProgramTwo
   other-modules:
       Paths_haskell_poc_apply
   hs-source-dirs:

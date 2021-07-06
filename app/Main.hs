@@ -1,10 +1,17 @@
 module Main where
 
 -- import Appl
-import ProgramOne
-import ProgramTwo
+
+-- import ComonadTree
+
+-- import Monoid.Cata
+-- import Monoid.State
+-- import Profunctor.Basics
+-- import Profunctor.ProgramOne
+-- import Profunctor.ProgramTwo
 
 main :: IO ()
 main = do
   print "======================"
-  programTwo
+
+-- ComonadTree.main

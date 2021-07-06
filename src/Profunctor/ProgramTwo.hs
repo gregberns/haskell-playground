@@ -2,13 +2,13 @@
 -- StandaloneDeriving, FlexibleContexts, UndecidableInstances,
 -- GADTs, KindSignatures, RankNTypes #-}
 
-module ProgramTwo
+module Profunctor.ProgramTwo
     ( programTwo
     ) where
 
 import Prelude hiding (div)
 import qualified Data.List as List
-import Html
+import Profunctor.Html as Html
 
 -- https://github.com/joneshf/elm-profunctors/tree/master/src/Buttons/Count
 

@@ -1,10 +1,10 @@
-module ProgramOne
+module Profunctor.ProgramOne
     ( programOne
     ) where
 
 import Prelude hiding (div)
 import qualified Data.List as List
-import Html
+import Profunctor.Html
 
 -- https://github.com/joneshf/elm-profunctors/tree/master/src/Buttons/Button
 
