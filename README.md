@@ -10,6 +10,12 @@ Better understand applicatives, profunctors, and any of the other crazy shit cat
 stack build && stack exec haskell-poc-apply-exe
 ```
 
+```
+ghci
+:l ComonadStore
+ComonadStore.main
+```
+
 ## Language and Expression Evaluation and Simplification
 
 Migrate OCaml language program
@@ -59,6 +65,10 @@ Replicate the work of [Hardy Jones'](https://github.com/joneshf) [Elm Profunctor
 
 In `ProgramThree.hs`, the `Model a` has an `a` that is `a -> b`, which from my current understanding is a profuctor.
 
+### Another thing to learn
+
+"Use CoYoneda to delay a functor instance"
+- Brian Lonsdorf, Magic Read Along, Episode: "I am not full of Beans!", 17:25
 
 ### Sorting
 

@@ -5,17 +5,17 @@
 
 module ComonadTree (main) where
 
-import Core
 -- import Data.Monoid
+-- Foldable,
+-- Monoid,
+-- foldMap,
+-- mappend,
+-- fmap,
+
+import Core
 import Prelude
-  ( --
-    -- Foldable,
-    Functor,
-    -- Monoid,
-    -- foldMap,
-    -- mappend,
+  ( Functor,
     Num,
-    -- fmap,
     print,
     show,
   )
@@ -77,30 +77,6 @@ instance Monoid Any where
 -- changed tree =
 --   foldMap (\a -> Any a) tree
 
--- leaf1 = Leaf 1 (Changed False)
-
--- leaf2 = Leaf 2 (Changed False)
-
--- leaf3 = Leaf 3 (Changed True)
-
--- branch1 = Branch leaf1 leaf2 (Changed False)
-
--- branch2 = leaf3
-
--- branch0 = Branch branch1 branch2 (Changed False)
-
--- leaf1 = Leaf 1 False
-
--- leaf2 = Leaf 2 False
-
--- leaf3 = Leaf 3 True
-
--- branch1 = Branch leaf1 leaf2 False
-
--- branch2 = leaf3
-
--- branch0 = Branch branch1 branch2 False
-
 -- foldMap over `a` so it can be converted to a Monoid
 -- data BinaryTree3 v a
 --   = Node3 a (BinaryTree3 a v) (BinaryTree3 a v)
@@ -122,13 +98,13 @@ data BinaryTree3 v a
 
 -- newtype DomTree a = BinaryTree Int a
 
-instance Foldable (BinaryTree3 a) where
-  foldMap f (Node3 v a l r) = foldMap f l `mappend` foldMap f r `mappend` f a
-  foldMap f (Leaf3 v a) = f a
+-- instance Foldable (BinaryTree3 a) where
+--   foldMap f (Node3 v a l r) = foldMap f l `mappend` foldMap f r `mappend` f a
+--   foldMap f (Leaf3 v a) = f a
 
-leaf1 = Leaf3 (1 :: Int) False
+-- leaf1 = Leaf3 (1 :: Int) False
 
-f1 = foldMap (\a -> Any a) leaf1
+-- f1 = foldMap (\a -> Any a) leaf1
 
 -- Node3 (Node3 0 False (Node3 1 False (Leaf3 3 False) (Leaf3 4 False)) (Leaf3 2 True)) False
 --   (Node3 (Node3 1 False (Leaf3 3 False) (Leaf3 4 False)) False
