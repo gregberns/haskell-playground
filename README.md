@@ -11,7 +11,7 @@ stack build && stack exec haskell-poc-apply-exe
 ```
 
 ```
-ghci
+ghci -isrc 
 :l ComonadStore
 ComonadStore.main
 ```

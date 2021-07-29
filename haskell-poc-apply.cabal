@@ -39,6 +39,7 @@ library
       Profunctor.ProgramOne
       Profunctor.ProgramThree
       Profunctor.ProgramTwo
+      TermRewrite.Basics
   other-modules:
       Paths_haskell_poc_apply
   hs-source-dirs:
