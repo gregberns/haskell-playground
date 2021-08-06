@@ -26,6 +26,7 @@ source-repository head
 library
   exposed-modules:
       Appl
+      Bimonad
       ComonadStore
       ComonadStoreUi
       ComonadTree
@@ -40,6 +41,8 @@ library
       Profunctor.ProgramThree
       Profunctor.ProgramTwo
       TermRewrite.Basics
+      TermRewrite.RecursionSchemes
+      TermRewrite.RecursionSchemes2
   other-modules:
       Paths_haskell_poc_apply
   hs-source-dirs:
@@ -48,6 +51,7 @@ library
       base >=4.7 && <5
     , comonad
     , mtl
+    , pretty
   default-language: Haskell2010
 
 executable haskell-poc-apply-exe
@@ -62,6 +66,7 @@ executable haskell-poc-apply-exe
     , comonad
     , haskell-poc-apply
     , mtl
+    , pretty
   default-language: Haskell2010
 
 test-suite haskell-poc-apply-test
@@ -77,4 +82,5 @@ test-suite haskell-poc-apply-test
     , comonad
     , haskell-poc-apply
     , mtl
+    , pretty
   default-language: Haskell2010
