@@ -31,6 +31,7 @@ library
       ComonadStoreUi
       ComonadTree
       Core
+      MonadControl
       Monoid.Cata
       Monoid.State
       Profunctor.Basics
